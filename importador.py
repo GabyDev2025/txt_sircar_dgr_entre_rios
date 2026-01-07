@@ -26,7 +26,7 @@ for linea in lineas:
         continue
 
     # ========= LINEA DE COMPROBANTE (OBLIGATORIO TENER FECHA) =========
-    m = re.search(r"(\d{2}/\d{2}/\d{2}).*?-0*(\d+)", linea)
+    m = re.search(r"(\d{2}/\d{2}/\d{2}).*?-\s*0*(\d+)\s*-", linea)
     if not m:
         continue  # descartamos totales y líneas sin fecha
 
